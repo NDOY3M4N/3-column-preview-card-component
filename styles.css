@@ -15,21 +15,19 @@
 }
 
 body {
-  display: grid;
-  place-content: center;
   min-height: 100vh;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5rem 2rem;
+  display: grid;
+  place-items: center;
   font-family: 'Lexend Deca', sans-serif;
   font-size: 0.93rem;
   line-height: 1.5;
   background-color: var(--very-light-gray);
   color: var(--white);
+  padding: 5rem 2rem;
 }
 
 .grid {
+  max-width: 500px;
   display: grid;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -81,10 +79,9 @@ body {
 .grid__item--dark-cyan .btn { color: var(--accent-color); }
 
 @media (min-width: 850px) {
-  body { max-width: 900px; }
-
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
   }
 
   .grid__item h2 { margin: 1rem 0; }
